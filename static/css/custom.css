@@ -1,0 +1,20 @@
+
+
+#top_devices {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  }
+  #top_devices td, #top_devices th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  }
+  #top_devices tr:nth-child(even){background-color: #f2f2f2;}
+  #top_devices tr:hover {background-color: #ddd;}
+  #top_devices th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  }

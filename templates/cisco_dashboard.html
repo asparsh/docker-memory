@@ -1,0 +1,228 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <script src="{% static 'js/google_loader.js' %}"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="The design system sponsored by Cisco Brand">
+    <meta name="image" content="http://cisco-ui.cisco.com/assets/img/uikit-1200x630%402x.png">
+    <meta itemprop="name" content="Cisco UI Kit">
+    <meta itemprop="description" content="The design system sponsored by Cisco Brand">
+    <meta itemprop="image" content="http://cisco-ui.cisco.com">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cisco UI Kit">
+    <meta name="twitter:description" content="The design system sponsored by Cisco Brand">
+    <meta property="og:title" content="Cisco UI Kit">
+    <meta property="og:description" content="The design system sponsored by Cisco Brand">
+    <meta property="og:image" content="https://cisco-ui.cisco.com/assets/img/uikit-1200x630%402x.png">
+    <meta property="og:url" content="http://cisco-ui.cisco.com">
+    <meta property="og:site_name" content="Cisco UI Kit">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" sizes="196x196">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" sizes="128x128">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    <meta name="application-name" content="Cisco UI Kit">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="{% static 'img/mstile.png' %}">
+    <meta name="msapplication-square70x70logo" content="{% static 'img/mstile.png' %}">
+    <meta name="msapplication-square150x150logo" content="{% static 'img/mstile.png' %}">
+    <meta name="msapplication-wide310x150logo" content="{% static 'img/mstile.png' %}">
+    <meta name="msapplication-square310x310logo" content="{% static 'img/mstile.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>UI Kit &middot; Collage</title>
+
+    <link rel="stylesheet" href="{% static 'css/cui-standard.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"
+        integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="../public/js/styleguide.js"></script>
+</head>
+
+<body class="cui">
+    <nav class="header" id="styleguideheader" role="navigation">
+        <div class="container-fluid">
+            <div class="header-panels">
+                <div class="header-panel hidden-md-down">
+                    <h1 class="header__title">
+                        <span></span>
+                    </h1>
+                </div>
+
+                <div class="header-panel header-panel--center base-margin-left base-margin-right">
+                    <h1 class="header__title">
+                        <span>Memory Prediction using Arima</span>
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="content content--alt">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Left Rail -->
+                <div class="col-xl-2">
+                    <div class="section">
+
+                        <!-- Palette -->
+                        <div class="panel panel--loose panel--raised base-margin-bottom">
+                            <h2 class="subtitle">Memory Prediction</h2>
+                            <hr>
+                            <div class="base-margin-bottom">
+                                <div id="theme-colors">This is a django project done by Asparsh to analyse the memory consumption of routers over time</div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+                <!-- Middle Rail -->
+                <div class="col-xl-6">
+                    <div class="section">
+
+                        <!-- Button -->
+                        <div class="panel panel--loose panel--raised base-margin-bottom">
+                            <h2 class="subtitle">Select Device and Node</h2>
+                            <hr>
+                            <label> Select Device</label>
+                            <input list="device" id="device_selected" name="device_selected"
+                                onchange="setSelectedValue(this.value, {{ top_devices.device_nodes | safe }});" />
+                            <datalist id="device">
+                                <option value="" disabled selected>Select</option>
+                                {% for key, value in top_devices.items %}
+                                {% if key == 'device_nodes' %}
+                                {% for device, device_value in value.items %}
+                                <option value="{{ device }}" , selected="selected">{{ device }}</option>
+                                {% endfor %}
+                                {% endif %}
+                                {% endfor %}
+                            </datalist>
+                            <label> Select Node</label>
+                            <select id="node_selected" name="node_selected">
+                                <option value="" disabled selected>Select</option>
+                            </select>
+
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="panel panel--loose panel--raised base-margin-bottom">
+                            <h2 class="subtitle">Predictions</h2>
+                            <hr>
+                            <div class="timeseries" id="timeseries">
+                                {% include "fig.html" %}
+                            </div>
+
+                        </div>
+
+                        <!-- Radio -->
+                        <div class="panel panel--loose panel--raised base-margin-bottom">
+                            <h2 class="subtitle">Memory Available Last Seven Days</h2>
+                            <hr>
+                            <div class="sevendays" id="sevendays">
+                                <img id="widget3" src='../static/img/widget3.png' alt=" Image Not found" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Rail -->
+                <div class="col-xl-4">
+                    <div class="section">
+
+                        <!-- Accordion -->
+                        <div class="panel panel--loose panel--raised base-margin-bottom">
+                            <h2 class="subtitle">Devices with Low memory</h2>
+                            <hr>
+                            <div>
+                                <table id="top_devices">
+                                    <tr>
+                                        <th> Device ID</th>
+                                        <th> Node ID</th>
+                                        <th> Total Memory</th>
+                                        <th> Application Memory Available</th>
+                                    </tr>
+                                    {% for devices, value in top_devices.items %}
+                                    {% if devices == 'devices' %}
+                                    {% for device, device_value in value.items %}
+                                    {% for node, node_value in device_value.items %}
+                                    <tr>
+                                        <td> {{ device }}</td>
+                                        <td> {{ node }}</td>
+                                        <td> {{ node_value.total }}</td>
+                                        <td> {{ node_value.history }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Alert -->
+                        <div class="panel panel--loose panel--raised base-margin-bottom">
+                            <h2 class="subtitle">Low Memory devices vs High Memory device</h2>
+                            <hr>
+                            <div id="piechart"></div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="{% static 'js/custom_jquery.js' %}"></script>
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+          numbers = JSON.parse(JSON.stringify({{ top_devices.safe_critical | safe }}));
+          var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Critical Devices', numbers.critical],
+          ['Healthy Devices', numbers.safe]
+        ]);
+
+          // Optional; add a title and set the width and height of the chart
+          var options = {'title':'Memory Available'};
+
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+    </script>
+<!--    <script src="{% static 'js/chart.js' %}"></script>-->
+
+
+
+</body>
+
+</html>
